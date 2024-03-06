@@ -1,1 +1,1 @@
-# ipfixcol2
+# ipfixcol2 FreeBSD port
