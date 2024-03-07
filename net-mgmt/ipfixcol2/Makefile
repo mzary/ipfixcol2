@@ -16,7 +16,7 @@ LIB_DEPENDS=	 librdkafka.so:net/librdkafka \
 
 BUILD_DEPENDS= rst2man:textproc/py-docutils
 
-USES=		cmake pkgconfig
+USES=		cmake localbase:ldflags pkgconfig
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	CESNET
@@ -24,7 +24,8 @@ USE_RC_SUBR=${PORTNAME}
 PORTEXAMPLES=	*
 
 LDFLAGS+=	 -rdynamic
-CXXFLAGS+=	 -D_GNU_SOURCE
+CFLAGS+=	 -rdynamic -L${LOCALBASE}/lib -lepoll-shim
+CXXFLAGS+=	 -D_GNU_SOURCE -rdynamic -L${LOCALBASE}/lib -lepoll-shim
 
 OPTIONS_DEFINE= EXAMPLES
 
