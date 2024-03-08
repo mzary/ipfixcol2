@@ -11,7 +11,7 @@
  /** Identification of an invalid socket descriptor                                               */
  #define INVALID_FD        (-1)
  /** Timeout for a getter operation - i.e. epoll_wait timeout [in milliseconds]                   */
-@@ -446,6 +450,21 @@ listener_init(struct udp_data *instance)
+@@ -446,6 +450,22 @@ listener_init(struct udp_data *instance)
      const char *err_str;
  
      // Get maximum socket receive buffer size (in bytes)
@@ -29,11 +29,12 @@
 +    } else {
 +        sock_rmax = (int) space; 
 +    }
++    instance->listen.rmem_size = sock_rmax;
 +#else
      FILE *f;
      int sock_rmax = 0;
      static const char *sys_cfg = "/proc/sys/net/core/rmem_max";
-@@ -461,6 +480,7 @@ listener_init(struct udp_data *instance)
+@@ -461,6 +481,7 @@ listener_init(struct udp_data *instance)
      if (f != NULL) {
          fclose(f);
      }
