@@ -1,1 +1,2 @@
-IPFIXcol2 is a flexible, high-performance NetFlow v5/v9 and IPFIX flow data collector designed to be extensible by plugins.
+Flow Data Storage library for net-mgmt/ipfixcol2. The library provides
+components for parsing and processing IPFIX Messages.

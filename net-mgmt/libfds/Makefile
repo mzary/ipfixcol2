@@ -4,7 +4,7 @@ DISTVERSION=	0.5.0
 CATEGORIES=		net-mgmt
 
 MAINTAINER=	zarychtam@plan-b.pwste.edu.pl
-COMMENT=	Flow Data Storage library
+COMMENT=	Flow Data Storage library for IPFIX messages
 WWW=		https://github.com/CESNET/libfds
 
 LICENSE=		GPLv2
