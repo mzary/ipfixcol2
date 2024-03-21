@@ -1,4 +1,5 @@
 @dir etc/ipfixcol2
+bin/fdsdump
 bin/ipfixcol2
 bin/ipfixsend2
 include/ipfixcol2.h
