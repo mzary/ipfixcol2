@@ -1,7 +1,5 @@
 PORTNAME=		ipfixcol2
 DISTVERSION=	g20240321
-DISTNAME=		bsd-support
-PKGNAMESUFFIX=	-devel
 CATEGORIES=		net-mgmt
 
 MAINTAINER=	zarychtam@plan-b.pwste.edu.pl
@@ -11,7 +9,10 @@ WWW=		https://github.com/CESNET/ipfixcol2
 LICENSE=		GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-LIB_DEPENDS=	 librdkafka.so:net/librdkafka \
+PKGNAMESUFFIX=	-devel
+DISTNAME=		bsd-support
+
+LIB_DEPENDS= 	librdkafka.so:net/librdkafka \
 			 libepoll-shim.so:devel/libepoll-shim \
 			 libfds.so:net-mgmt/libfds
 
