@@ -26,6 +26,6 @@ include/libfds/trie.h
 include/libfds/xml_parser.h
 lib/libfds.so
 lib/libfds.so.0
-lib/libfds.so.0.4.0
+lib/libfds.so.0.5.0
 libdata/pkgconfig/libfds.pc
 @dir %%ETCDIR%%/user/elements
