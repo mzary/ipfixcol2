@@ -41,3 +41,4 @@ share/man/man7/ipfixcol2-timecheck-output.7.gz
 share/man/man7/ipfixcol2-udp-input.7.gz
 share/man/man7/ipfixcol2-viewer-output.7.gz
 @sample etc/ipfixcol2/startup.xml.sample
+@dir(ipfixcol2,ipfixcol2) /var/run/ipfixcol2

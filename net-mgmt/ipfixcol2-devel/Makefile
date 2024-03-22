@@ -24,6 +24,8 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	CESNET
 GH_TAGNAME= 0d2e6f67ee8f2650abc33daf780f9cf783aad232
 USE_RC_SUBR=${PORTNAME}
+USERS=	${PORTNAME}
+GROUPS=	${PORTNAME}
 PORTEXAMPLES=	*
 
 LDFLAGS+=	 -rdynamic
@@ -33,8 +35,8 @@ CXXFLAGS+=	 -D_GNU_SOURCE -rdynamic -L${LOCALBASE}/lib -lepoll-shim
 OPTIONS_DEFINE= EXAMPLES
 
 post-install:
-	${MKDIR} ${STAGEDIR}${ETCDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/data/configs/multiOutput.xml ${STAGEDIR}${ETCDIR}/startup.xml.sample
+	${MKDIR} ${STAGEDIR}${ETCDIR} ${STAGEDIR}/var/run/${PORTNAME}
+	${INSTALL_DATA} ${WRKSRC}/doc/data/configs/udp2json.xml ${STAGEDIR}${ETCDIR}/startup.xml.sample
 
 post-install-EXAMPLES-on:
 	cd ${WRKSRC}/doc/data && ${COPYTREE_SHARE} "configs" ${STAGEDIR}${EXAMPLESDIR}
