@@ -1,5 +1,5 @@
 PORTNAME=		ipfixcol2
-DISTVERSION=	g20240321
+DISTVERSION=	g20240404
 CATEGORIES=		net-mgmt
 
 MAINTAINER=	zarychtam@plan-b.pwste.edu.pl
@@ -22,15 +22,14 @@ USES=		cmake localbase:ldflags pkgconfig
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	CESNET
-GH_TAGNAME= 0d2e6f67ee8f2650abc33daf780f9cf783aad232
+GH_TAGNAME= 8bf2adccb0c6f1a9a6ed04d460d272de5d217727
 USE_RC_SUBR=${PORTNAME}
 USERS=	${PORTNAME}
 GROUPS=	${PORTNAME}
 PORTEXAMPLES=	*
 
 LDFLAGS+=	 -rdynamic
-CFLAGS+=	 -rdynamic -L${LOCALBASE}/lib -lepoll-shim
-CXXFLAGS+=	 -D_GNU_SOURCE -rdynamic -L${LOCALBASE}/lib -lepoll-shim
+CXXFLAGS+=	 -D_GNU_SOURCE
 
 OPTIONS_DEFINE= EXAMPLES
 
